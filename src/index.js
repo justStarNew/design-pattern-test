@@ -1,11 +1,32 @@
-class Person {
-    constructor(name) {
-        this.name=name
+class People {
+    constructor(name){
+        this.name = name
     }
-    getName() {
-        return this.name
+    saySomething(){
+
     }
 }
 
-let p = new Person("双越老师")
-alert(p.getName()) 
+class A extends People {
+    constructor(name){
+        super(name)
+    }
+    saySomething(){
+        alert('i am a')
+    }
+}
+
+class B extends People {
+    constructor(name){
+        super(name)
+    }
+    saySomething(){
+        alert('i am b')
+    }
+}
+
+let a = new A('a')
+
+let b = new B('b')
+a.saySomething()
+b.saySomething()
